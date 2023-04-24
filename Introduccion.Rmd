@@ -1,0 +1,45 @@
+---
+title: "Introducción a RMarkdown"
+subtitle: "Archivo guía para el uso de RMarkdown en la generación de documentos que incluyan análisis de información, resultados y código"
+author: "Andres Palacio"
+output: pdf_document
+fig_caption: yes
+latex_engine: xelatex
+number_sections: yes
+toc: yes
+date: '\today'
+linkcolor: blue
+urlcolor: blue
+---
+
+# Introducción R Markdown
+
+Actualizamos nuestro entorno:
+
+```{r setup, include = TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Para la realización de este documento tomamos como fuente de instrucción los siguientes enlaces: 
+
+ - <http://rmarkdown.rstudio.com>.
+
+ - <https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html>.
+ 
+ - <https://rpubs.com/tereboca/informe_rmakrdown>
+
+Al hacer clic en el botón **Knit** se generará el documento PDF que se elaborará a continuación.
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
