@@ -18,6 +18,6 @@ install.packages('knitr', repos = c('http://rforge.net',
                                     'http://cran.rstudio.org'),
                                      type = 'source')
 
-#Enlace elementos de markdown:
+#Enlace elementos de Markdown:
 #https://github.com/gboccardo/manual-ED-UCH
 
