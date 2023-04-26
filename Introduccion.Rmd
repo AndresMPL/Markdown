@@ -1,7 +1,7 @@
 ---
-title: "Informe en RMarkdown"
-subtitle: "Archivo guía para el uso de RMarkdown en la generación de documentos que incluyan análisis de información, resultados y código en R"
-author: "Andres Palacio"
+title: "Documentos en RMarkdown"
+subtitle: "Archivo guía para el uso de RMarkdown en la generación de documentos que incluyan análisis de información, resultados y código en RStudio."
+author: "Andres M. Palacio"
 output: pdf_document
 fig_caption: yes
 latex_engine: xelatex
@@ -16,50 +16,88 @@ urlcolor: blue
 
 # Introducción a RMarkdown
 
-Actualizamos nuestro entorno:
+## Actualización
+
+Para actualizar la librería que utiliza RMarkdown utilizo la siguiente opción:
 
 ```{r setup, include = TRUE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Para la realización de este documento tomamos como fuente de instrucción los siguientes enlaces: 
+Para la realización de este documento he tomado como fuentes los siguientes enlaces:
 
- - <http://rmarkdown.rstudio.com>.
+* [Rstudio](http://rmarkdown.rstudio.com)
 
- - <https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html>.
- 
- - <https://rpubs.com/tereboca/informe_rmakrdown>
+* [Bookdown](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
+
+* [RPubs](https://rpubs.com/tereboca/informe_rmakrdown)
 
 Al hacer clic en el botón **Knit** se generará el documento PDF que está en elaboración.
 
-# Formato de texto
+# Aspectos Generales
 
-**Negrita**
+## Formato de texto
 
-*Cursiva*
+1.  Ejemplo para utilizar **Negrita**
 
-_Subrayado_
+2.  Ejemplo para utilizar *Cursiva*
 
->Texto con tabulación
+3.  Ejemplo para utilizar *Subrayado*
 
-Texto con nota al pie [^1]
+4.  
+
+    > Ejemplo de texto con tabulación
+
+5.  Ejemplo de texto con nota al pie [^1]
 
 [^1]: Texto de la nota al pie
 
-[Manual de R](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
+```{=html}
+<!-- -->
+```
+6.  Ejemplo de texto que incluye un hipervínculo: [Manual de R](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
 
+7.  Ejemplo de una lista sin números y con submenú
+
+    -   Elemento 1
+    -   Elemento 2
+
+\pagebreak
+
+
+## Posición del texto
 
 
 \pagebreak
 
 
-# Gráficos
+## Gráficos
 
 
 \pagebreak
 
 
-# Tablas
+## Tablas
+
+A continuación, un ejemplo de una tabla simple:
+
+Table: Ejemplo de Tabla Simple
+
+   **Título 1** |    **Título 2**
+----------------|-----------------
+*Texto 1*       | Texto 3
+**Texto 2**     | Texto 4
+
+\pagebreak
+
+
+## Bibliografía
+
+
+\pagebreak
+
+
+## Código en R
 
 
 \pagebreak
