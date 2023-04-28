@@ -32,11 +32,17 @@ Para la realización de este documento he tomado como fuentes los siguientes enl
 
 * [RPubs](https://rpubs.com/tereboca/informe_rmakrdown)
 
+* [Elementos de Markdown](https://github.com/gboccardo/manual-ED-UCH)
+
 Al hacer clic en el botón **Knit** se generará el documento PDF que está en elaboración.
+
+\pagebreak
 
 # Aspectos Generales
 
 ## Formato de texto
+
+Existe una guía de elementos de [Markdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 
 1.  Ejemplo para utilizar **Negrita**
 
@@ -44,23 +50,22 @@ Al hacer clic en el botón **Knit** se generará el documento PDF que está en e
 
 3.  Ejemplo para utilizar *Subrayado*
 
-4.  
-
-    > Ejemplo de texto con tabulación
+4.  > Ejemplo de texto con tabulación
 
 5.  Ejemplo de texto con nota al pie [^1]
 
 [^1]: Texto de la nota al pie
 
-```{=html}
-<!-- -->
-```
 6.  Ejemplo de texto que incluye un hipervínculo: [Manual de R](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
 
 7.  Ejemplo de una lista sin números y con submenú
 
     -   Elemento 1
     -   Elemento 2
+
+8. Ejemplo de superíndice^2^
+
+9. Ejemplo de ~~tachado~~
 
 \pagebreak
 
@@ -98,6 +103,20 @@ Table: Ejemplo de Tabla Simple
 
 
 ## Código en R
+
+### Configuración de los trozos de código
+
+- eval: Si se configura como *FALSE*, R sólo mostrará, pero no correrá el código
+
+- include: Si se configura como *FALSE*, R no mostrará el código, pero correrá el comando y mostrará sus resultados.
+
+- error: Si se configura como *FALSE*, R no mostrará los mensajes de errores que resulten de la ejecución del código.
+
+- results: Si se configura como *hide*, R no mostrará los resultados del código aunque lo ejecutará tras bambalinas. Si se configura como *delay*, R mostrará sólo el último resultado del trozo de código. Si se configura como *asis* R no configurará con markdown la estructura de los resultados, imprimiéndolos de manera directa en el reporte final. Esto resulta útil cuando usamos funciones específicas para presentar resultados en algún formato de reporte específico (Word, PDF, etc.)
+
+- warning: Si se configura como *FALSE* R no mostrará los mensajes de advertencia que resulten de la ejecución del código.
+
+- message: Si se configura como *FALSE* R no mostrará ningún tipo de mensaje que resulte de la ejecución del código.
 
 
 \pagebreak
