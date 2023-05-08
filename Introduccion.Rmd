@@ -1,3 +1,4 @@
+
 ---
 title: "Documentos en RMarkdown"
 subtitle: "Archivo guía para el uso de RMarkdown en la generación de documentos que incluyan análisis de información, resultados y código en RStudio."
@@ -12,27 +13,35 @@ linkcolor: blue
 urlcolor: blue
 ---
 
+
 \pagebreak
 
 # Introducción a RMarkdown
 
-## Actualización
+## Notas al lector
 
-Para actualizar la librería que utiliza RMarkdown utilizo la siguiente opción:
+1.  El código del presente documento se encuentra en el repositorio de GitHub.
+
+
+## Actualización de apquetes
+
+Para actualizar la librería de RMarkdown he utilizado la siguiente opción:
 
 ```{r setup, include = TRUE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Para la realización de este documento he tomado como fuentes los siguientes enlaces:
 
-* [Rstudio](http://rmarkdown.rstudio.com)
+A continuacióbn, relaciono las fuentes de información utilizadas para la generación del presente documento y, en general, para el uso de RMarkdown:
 
-* [Bookdown](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
+-   [Rstudio](http://rmarkdown.rstudio.com)
 
-* [RPubs](https://rpubs.com/tereboca/informe_rmakrdown)
+-   [Bookdown](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
 
-* [Elementos de Markdown](https://github.com/gboccardo/manual-ED-UCH)
+-   [RPubs](https://rpubs.com/tereboca/informe_rmakrdown)
+
+-   [Elementos de Markdown](https://github.com/gboccardo/manual-ED-UCH)
+
 
 Al hacer clic en el botón **Knit** se generará el documento PDF que está en elaboración.
 
@@ -42,7 +51,8 @@ Al hacer clic en el botón **Knit** se generará el documento PDF que está en e
 
 ## Formato de texto
 
-Existe una guía de elementos de [Markdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+Existe una guía rápida de elementos de [Markdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) y a continuación muestro algunos ejemplos del uso de estos elementos:
+
 
 1.  Ejemplo para utilizar **Negrita**
 
@@ -63,60 +73,76 @@ Existe una guía de elementos de [Markdown](https://www.rstudio.com/wp-content/u
     -   Elemento 1
     -   Elemento 2
 
-8. Ejemplo de superíndice^2^
+8.  Ejemplo de superíndice^2^
 
-9. Ejemplo de ~~tachado~~
+9.  Ejemplo de ~~tachado~~
+
+10. Ejemplo de una ecuación: $A = \pi *r^{2}$
+
+
 
 \pagebreak
-
 
 ## Posición del texto
 
-
 \pagebreak
-
 
 ## Gráficos
 
-
 \pagebreak
-
 
 ## Tablas
 
 A continuación, un ejemplo de una tabla simple:
 
-Table: Ejemplo de Tabla Simple
+| **Título 1** | **Título 2** |
+|--------------|--------------|
+| *Texto 1*    | Texto 3      |
+| **Texto 2**  | Texto 4      |
 
-   **Título 1** |    **Título 2**
-----------------|-----------------
-*Texto 1*       | Texto 3
-**Texto 2**     | Texto 4
+: Ejemplo de Tabla Simple
 
 \pagebreak
-
 
 ## Bibliografía
 
-
 \pagebreak
-
 
 ## Código en R
 
 ### Configuración de los trozos de código
 
-- eval: Si se configura como *FALSE*, R sólo mostrará, pero no correrá el código
+* **Caso 1**
 
-- include: Si se configura como *FALSE*, R no mostrará el código, pero correrá el comando y mostrará sus resultados.
+Para incluir un trozo de código de R en la estructura de Markdown se puede utilizar la opción "*insert a new code chunk*" y automáticamente se insertará una línea con tres apóstrofes seguidos de {r} y otros tres apóstrofes al final.
 
-- error: Si se configura como *FALSE*, R no mostrará los mensajes de errores que resulten de la ejecución del código.
+Al incluir el código, luego del símbolo {r}, el resultado se verá de la siguiente manera:
 
-- results: Si se configura como *hide*, R no mostrará los resultados del código aunque lo ejecutará tras bambalinas. Si se configura como *delay*, R mostrará sólo el último resultado del trozo de código. Si se configura como *asis* R no configurará con markdown la estructura de los resultados, imprimiéndolos de manera directa en el reporte final. Esto resulta útil cuando usamos funciones específicas para presentar resultados en algún formato de reporte específico (Word, PDF, etc.)
+```{r, eval=FALSE, include=TRUE}
 
-- warning: Si se configura como *FALSE* R no mostrará los mensajes de advertencia que resulten de la ejecución del código.
+1+1 
+#Ejemplo
 
-- message: Si se configura como *FALSE* R no mostrará ningún tipo de mensaje que resulte de la ejecución del código.
+```
+
+En medio de los tres apóstrofes al inicio y al final, se debe incluir el código de R; allí mismo se pueden definir opciones adicionales para el código y para ello se puede consultar la guía de [Markdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) incluida en R.
+
+-   eval: Si se configura como *FALSE*, R sólo mostrará, pero no correrá el código
+
+-   include: Si se configura como *FALSE*, R no mostrará el código, pero correrá el comando y mostrará sus resultados.
+
+-   error: Si se configura como *FALSE*, R no mostrará los mensajes de errores que resulten de la ejecución del código.
+
+-   results: Si se configura como *hide*, R no mostrará los resultados del código aunque lo ejecutará tras bambalinas. Si se configura como *delay*, R mostrará sólo el último resultado del trozo de código. Si se configura como *asis* R no configurará con markdown la estructura de los resultados, imprimiéndolos de manera directa en el reporte final. Esto resulta útil cuando usamos funciones específicas para presentar resultados en algún formato de reporte específico (Word, PDF, etc.)
+
+-   warning: Si se configura como *FALSE* R no mostrará los mensajes de advertencia que resulten de la ejecución del código.
+
+-   message: Si se configura como *FALSE* R no mostrará ningún tipo de mensaje que resulte de la ejecución del código.
+
+\pagebreak
+
+
+## Símbolos
 
 
 \pagebreak
