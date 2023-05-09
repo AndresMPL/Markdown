@@ -1,5 +1,6 @@
 
 ---
+
 title: "Documentos en RMarkdown"
 subtitle: "Archivo guía para el uso de RMarkdown en la generación de documentos que incluyan análisis de información, resultados y código en RStudio."
 author: "Andres M. Palacio"
@@ -11,6 +12,7 @@ toc: yes
 date: '\today'
 linkcolor: blue
 urlcolor: blue
+
 ---
 
 
